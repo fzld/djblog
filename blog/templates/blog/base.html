@@ -19,10 +19,14 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <h1><a href="/">Django Girls Blog</a></h1>
+        <a href="{% url 'post_new' %}">
+          {% include './icons/file-earmark-plus.svg' %}
+        </a>
+        <h1><a href="{% url 'home' %}">Django Girls Blog</a></h1>
+        <a href="{% url 'post' %}"> post </a>
       </div>
     </header>
-    <main class="container">
+    <main class="content container">
       <div class="row">
         <div class="col">{% block content %} {% endblock %}</div>
       </div>
